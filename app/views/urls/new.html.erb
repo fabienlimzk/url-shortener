@@ -1,0 +1,14 @@
+<h1>Submit the URL that you want to shorten</h1>
+
+<%= form_with model: @url do |f| %>
+  <div>
+    <%= f.label :given_url%>
+    <%= f.text_field :given_url%>
+    <% @url.errors.full_messages_for(:given_url).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

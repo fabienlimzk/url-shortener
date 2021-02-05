@@ -1,0 +1,6 @@
+<div>
+  <strong>Your Given URL:</strong> <%= @url.given_url %>
+  <br />
+  <br />
+  <strong>Your Shortened URL:</strong> <%= link_to  "#{request.domain}:#{request.port}/shorten/#{@url.shorten_url}", "#{request.domain}:#{request.port}/shorten/#{@url.shorten_url}" %>
+</div>
